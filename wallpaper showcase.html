@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Showcase</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100 text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="w-full bg-gradient-to-r from-indigo-700 via-purple-700 to-blue-700 text-white py-8">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold">Wallpaper Showcase</h1>
+            <p class="mt-4 text-lg md:text-xl">Explore and download stunning wallpapers for your devices.</p>
+        </div>
+    </header>
+
+    <!-- Search Bar Section -->
+    <section class="py-8 bg-blue shadow-md">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 flex justify-center">
+            <div class="w-full max-w-3xl flex">
+                <input type="text" id="searchInput" placeholder="Search for wallpapers..." class="w-full px-4 py-3 text-lg border border-blue-300 rounded-l-lg outline-none focus:ring-2 focus:ring-blue-400">
+                <button onclick="searchWallpapers()" class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-r-lg hover:bg-indigo-700 transition">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-8">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
+            <h2 class="text-2xl font-semibold mb-6">Categories</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="category-button" onclick="filterCategory('Nature')">Nature</button>
+                <button class="category-button" onclick="filterCategory('Abstract')">Abstract</button>
+                <button class="category-button" onclick="filterCategory('Space')">Space</button>
+                <button class="category-button" onclick="filterCategory('Animals')">Animals</button>
+                <button class="category-button" onclick="filterCategory('Art')">Art</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-8">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="gallery">
+            <!-- Sample gallery items -->
+        
+             <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall1.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+    
+
+             <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall2.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+
+             <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall3.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+
+             <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall4.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall5.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall6.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall7.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall8.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall9.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall10.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall11.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall12.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall13.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall14.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall15.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall16.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall17.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall18.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall19.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall20.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall21.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall22.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall23.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall24.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+ <div class="gallery-item group relative" data-category="Nature">
+                <img src="C:\Users\Nilaksha\Downloads\New folder (2)\New folder\wall25.jpg" alt="Wallpaper 1">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+
+          
+            <!-- Sample gallery items -->  
+            <div class="gallery-item group relative" data-category="Art">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Art">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Art">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+              <div class="gallery-item group relative" data-category="Art">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Art">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Art">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Art">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+             <!-- Sample gallery items -->
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+
+            <div class="gallery-item group relative" data-category="Abstract">
+                <img src="C:\Users\Nilaksha\Downloads\wallpaper.jpg" alt="Wallpaper 2">
+                <button class="download-btn opacity-90 group-hover:opacity-100" onclick="downloadImage(`file:///C:/Users/Nilaksha/Downloads/New%20folder/index.html`)">Download</button>
+            </div>
+           
+           
+           
+        </div>
+    </section>
+
+    <!-- Modal Preview Section -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-4 max-w-lg w-full relative">
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">&times;</button>
+            <img id="modalImage" src="" alt="Preview Image" class="w-full h-auto rounded-lg">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="w-full bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
+            <p>&copy; 2023 Wallpaper Showcase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- CSS for Buttons and Gallery Hover Effects -->
+    <style>
+        .category-button {
+            @apply bg-indigo-600 text-white px-4 py-2 rounded-full text-xs font-semibold uppercase hover:bg-indigo-800 transition;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn,
+        .preview-btn {
+            @apply absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white font-semibold transition-opacity duration-300;
+        }
+
+        .download-btn {
+            top: auto;
+            bottom: 0;
+        }
+
+        .preview-btn {
+            top: 0;
+            bottom: auto;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+
+    <!-- JavaScript for Search, Category Filter, and Modal Preview -->
+    <script>
+        function searchWallpapers() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const items = document.querySelectorAll(".gallery-item");
+
+            items.forEach(item => {
+                const altText = item.querySelector("img").alt.toLowerCase();
+                item.style.display = altText.includes(query) ? "block" : "none";
+            });
+        }
+
+        function filterCategory(category) {
+            const items = document.querySelectorAll(".gallery-item");
+
+            items.forEach(item => {
+                const itemCategory = item.getAttribute("data-category");
+                item.style.display = itemCategory === category ? "block" : "none";
+            });
+        }
+
+        function downloadImage(url) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'wallpaper.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function previewImage(url) {
+            document.getElementById("modalImage").src = url;
+            document.getElementById("modal").classList.remove("hidden");
+        }
+
+        function closeModal() {
+            document.getElementById("modal").classList.add("hidden");
+        }
+    </script>
+
+</body>
+</html>
